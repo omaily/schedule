@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import Link from 'next/link';
-import './globals.css'
+import Image from 'next/image';
 
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css'
+import logoMTS from "../img/logo-eco.svg"
+
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,20 +20,32 @@ export default function RootLayout({
     <html lang="en">
         <body>
             <header>
-                <Link href="/">
-                        <div>Home</div>
-                </Link>
-                <Link href="/carReservation">
-                        <div>Расписание</div>
-                </Link>
-                <Link href="/login">
-                        <div>Войти</div>
-                </Link>
+                <div id="header-wrapper">
+                    <Image 
+                        alt='Mount'
+                        src={logoMTS}
+                        // fill
+                        // sizes='48px'
+                        style={{
+                            alignItems: "center",
+                            margin: "0px 20px 0px 0px",
+                        }}
+                    />
+                    <nav id="menu-navigation">
+                        <Link href="/">
+                            <div id="link">Home</div>
+                        </Link>
+                        <Link href="/carReservation">
+                            <div id="link">Расписание</div>
+                        </Link>
+                    </nav>
+                    <Link href="/login" className='login'>
+                        <div id="link">Войти</div>
+                    </Link>
+                </div>
             </header>
             <main>
-                <div className='content'>
-                    {children}
-                </div>
+                {children}
             </main>
         </body>
     </html>

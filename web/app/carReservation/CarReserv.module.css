@@ -1,0 +1,30 @@
+.content {
+    width: 100%;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
+    color:rgb(236, 213, 169);
+    backdrop-filter: blur(0px);
+}
+
+.table {
+    width: 100%;
+    margin-top: var(--padding);
+    border-collapse: collapse;
+}
+
+.table th {
+    color: var(--surfase-2);
+    padding: var(--padding) 0;
+    text-align: start;
+    border-bottom: 1px solid var(--surfase-1);
+}
+
+.table th:first-child{
+    padding-left: var(--padding);
+}
+
+.table tbody:before {
+    content:"@";
+    display:block;
+    line-height:20px;
+    text-indent:-99999px;
+}

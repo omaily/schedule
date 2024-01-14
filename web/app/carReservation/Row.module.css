@@ -1,0 +1,76 @@
+
+
+.row {
+    box-shadow:  5px 2px 10px -9px var(--surfase-1), 
+                -5px 2px 10px -9px var(--surfase-1);
+    
+    padding: 10px;                
+}
+
+.row:hover {
+    box-shadow:  8px 4px  8px -2px var(--surfase-0), 
+                -8px -2px 8px -2px var(--surfase-0);
+    border-radius: var(--border);
+}
+
+.row td {
+    padding-right:0;
+}
+
+.row td:first-child{
+    padding-left: var(--padding);
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.line{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.faIcon{
+    margin: 5px 5px;
+
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display,inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto; 
+}
+
+.line p {
+    vertical-align: auto;
+    margin: auto;
+}
+
+.edit {
+    padding: 5px 10px;
+    width: 100px;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    /* padding: .5em 2em; */
+    /* outline: none; */
+    border: 1px solid;
+    border-radius: 5px;
+    transition: 0.2s;
+} 
+
+.btn:hover { background: rgba(255,255,255,.2); }
+.btn:active { background: rgb(255, 137, 28); }

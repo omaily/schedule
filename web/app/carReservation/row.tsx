@@ -20,11 +20,25 @@ interface User {
 }
 
 export default function Row(item: Order): ReactNode | null {
+    let dat: Date = new Date();
+    let YY = dat.getFullYear()
+    let MM = dat.getMonth()
+    let DD = dat.getDate()
+    let hh = dat.getHours()
+    let mm = dat.getMinutes()
+    let date: String =  DD + "/" + MM + "/" + YY + " " + hh + ":" + mm 
 
     return (
-        <tr key={item.id}>
-            <td>{item.name}</td>
-            <td>{item.price}</td>
+        <tr className={styles.row}>
+
+            <td>
+                {item.name}
+            </td>
+            
+            <td style={{ width: "140px",}}>
+                {item.carType}
+            </td>
+            
             <td>
                 <div className={styles.icons}>
                     <div className={styles.line}>
@@ -37,19 +51,24 @@ export default function Row(item: Order): ReactNode | null {
                     </div>
                 </div>
             </td>
-            <td>                
-                <div className={styles.line}>
-                    <p>{item.carType}</p>
-                </div>        
-                <div className={styles.line}>
-                    <p>Р724OН</p>
-                </div> 
+            
+            <td style={{ width: "140px",}}>
+                <p>{item.carType}</p>
             </td>
+            
+            <td>В Работе</td>
+            
+            <td>
+                <p>{date} </p>
+                <p>{date} </p>
+            </td>
+            
             <td className={styles.edit}>
                 <button className={styles.btn}>
-                    Редактировать
+                    O
                 </button>
             </td>
+
         </tr> 
     );
 }
