@@ -10,16 +10,16 @@
     --padding: 1rem;
 
     --text-rgb: rgb(39, 39, 39);
-    --background-rgb: rgba(246, 246, 246, 1);
+    --background-rgb: rgb(255, 255, 255);
+    --background-rgb-aux: rgb(252, 233, 233);
 
     --link-color-rgb: rgb(252, 48, 48);
     --link-background-rgb: rgb(252, 48, 48);
 
-
-    --surfase: rgba(255, 255, 255, 0.98);
+    /* --surfase: rgba(255, 255, 255, 0.98);
     --surfase-1: rgba(255, 187, 145, 1);
     --surfase-2: rgb(61, 61, 61);
-    --surfase-3: rgba(81, 80, 112, 1);
+    --surfase-3: rgba(81, 80, 112, 1); */
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -47,14 +47,13 @@ header{
     position: sticky;
     top: 0;
     
-    background-color: var(--surfase-0);
+    background-color: var(--background-rgb-aux);
 }
 
 #header-wrapper{
     max-width: 1440px;
-    height: 80px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
+    
     padding: 0px 40px;
     
     text-align: center;

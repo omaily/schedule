@@ -28,3 +28,31 @@
     line-height:20px;
     text-indent:-99999px;
 }
+
+
+ /* //////////////////////////////////////////////// */
+
+.month ul {list-style-type: none;}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr)
+}
+
+.wrapper div {
+    padding: 10px 0;
+    background-color: var(--surfaceZ);
+    text-align: center;
+}
+
+.wrapper .weekdays {
+    margin: 0;
+    padding: 10px 0;
+
+    color: #666;
+    text-align: center;
+}
+
+.wrapper>.days:hover {
+    background-color:red;
+}

@@ -1,4 +1,3 @@
-'use client'
 import React, { ReactNode } from 'react';
 import styles from './Row.module.css';
 
@@ -29,17 +28,17 @@ export default function Row(item: Order): ReactNode | null {
     let date: String =  DD + "/" + MM + "/" + YY + " " + hh + ":" + mm 
 
     return (
-        <tr className={styles.row}>
+        <div className={styles.row}>
 
-            <td>
+            <div className={styles.days}>
                 {item.name}
-            </td>
+            </div>
             
-            <td style={{ width: "140px",}}>
+            <div className={styles.days}>
                 {item.carType}
-            </td>
+            </div>
             
-            <td>
+            <div className={styles.days}>
                 <div className={styles.icons}>
                     <div className={styles.line}>
                         <AccountCircleIcon className={styles.faIcon}/>
@@ -50,25 +49,27 @@ export default function Row(item: Order): ReactNode | null {
                         <p>{item.user.number}</p>
                     </div>
                 </div>
-            </td>
+            </div>
             
-            <td style={{ width: "140px",}}>
+            <div className={styles.days}>
                 <p>{item.carType}</p>
-            </td>
+            </div>
             
-            <td>В Работе</td>
+            <div className={styles.days}>
+                В Работе
+            </div>
             
-            <td>
+            <div className={styles.days}>
                 <p>{date} </p>
                 <p>{date} </p>
-            </td>
+            </div>
             
-            <td className={styles.edit}>
+            <div className={styles.days}>
                 <button className={styles.btn}>
                     O
                 </button>
-            </td>
+            </div>
 
-        </tr> 
+        </div> 
     );
 }

@@ -1,10 +1,10 @@
-
-
 .row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+
     box-shadow:  5px 2px 10px -9px var(--surfase-1), 
                 -5px 2px 10px -9px var(--surfase-1);
-    
-    padding: 10px;                
 }
 
 .row:hover {
@@ -13,12 +13,8 @@
     border-radius: var(--border);
 }
 
-.row td {
-    padding-right:0;
-}
-
-.row td:first-child{
-    padding-left: var(--padding);
+.row div {
+    background-color: var(--surfaceZ);
 }
 
 .icons {
@@ -26,7 +22,6 @@
     flex-direction: column;
     align-items: flex-start;
 }
-
 
 .line{
     flex: 1 1 auto;
